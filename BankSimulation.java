@@ -41,7 +41,6 @@ class Account {
     }
 }
 
-// SavingsAccount subclass
 class SavingsAccount extends Account {
     private double interestRate;
 
@@ -50,10 +49,9 @@ class SavingsAccount extends Account {
         this.interestRate = interestRate;
     }
 
-    // Overriding withdraw method
-    @Override
+ 
     public void withdraw(double amount) {
-        if (balance - amount >= 500) { // Minimum balance rule
+        if (balance - amount >= 500) { 
             super.withdraw(amount);
         } else {
             System.out.println("Cannot withdraw. Minimum balance of 500 required.");
@@ -78,3 +76,4 @@ public class BankSimulation {
         acc1.printTransactionHistory();
     }
 }
+
